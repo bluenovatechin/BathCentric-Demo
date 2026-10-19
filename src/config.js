@@ -3,7 +3,7 @@
 // empty is simply not shown on the site.
 const env = import.meta.env;
 
-export const SITE_URL = String(env.VITE_SITE_URL || 'https://bluenovatechin.github.io/BathCentric').replace(/\/+$/, '');
+export const SITE_URL = String(env.VITE_SITE_URL || 'https://bluenovatechin.github.io/BathCentric-Demo').replace(/\/+$/, '');
 export const BASE = env.BASE_URL || '/';
 
 export const brand = {

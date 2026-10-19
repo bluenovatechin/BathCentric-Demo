@@ -1,0 +1,55 @@
+# Builds the site on every push to main and publishes dist/ to the gh-pages branch.
+# One-time setup: Settings → Pages → Source: "Deploy from a branch" → gh-pages / (root).
+# Optional site values (phone, WhatsApp, analytics…) go in Settings → Secrets and variables → Actions → Variables.
+name: Deploy to GitHub Pages
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: gh-pages
+  cancel-in-progress: true
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+
+      - run: npm ci
+
+      - name: Build
+        run: npm run build
+        env:
+          BASE_PATH: ${{ vars.BASE_PATH || '/BathCentric-Demo/' }}
+          VITE_SITE_URL: ${{ vars.VITE_SITE_URL || 'https://bluenovatechin.github.io/BathCentric-Demo' }}
+          VITE_WHATSAPP: ${{ vars.VITE_WHATSAPP }}
+          VITE_PHONE: ${{ vars.VITE_PHONE }}
+          VITE_EMAIL: ${{ vars.VITE_EMAIL }}
+          VITE_ADDRESS: ${{ vars.VITE_ADDRESS }}
+          VITE_SERVICE_AREA: ${{ vars.VITE_SERVICE_AREA }}
+          VITE_HOURS: ${{ vars.VITE_HOURS }}
+          VITE_GA_ID: ${{ vars.VITE_GA_ID }}
+          VITE_GOOGLE_SITE_VERIFICATION: ${{ vars.VITE_GOOGLE_SITE_VERIFICATION }}
+
+      - name: Check links
+        run: npm run check:links
+        env:
+          BASE_PATH: ${{ vars.BASE_PATH || '/BathCentric-Demo/' }}
+
+      - name: Publish to gh-pages
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./dist
+          force_orphan: true

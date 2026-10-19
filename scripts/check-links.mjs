@@ -5,11 +5,11 @@ import path from 'path';
 import { fileURLToPath } from 'url';
 
 const dist = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..', 'dist');
-const base = (process.env.BASE_PATH || '/BathCentric/').replace(/\/?$/, '/');
+const base = (process.env.BASE_PATH || '/BathCentric-Demo/').replace(/\/?$/, '/');
 const pages = fs.readdirSync(dist).filter((f) => f.endsWith('.html'));
 
 const ok = (ref) => {
-  if (ref === base.slice(0, -1)) return true; // host redirects /BathCentric -> /BathCentric/
+  if (ref === base.slice(0, -1)) return true; // host redirects /BathCentric-Demo -> /BathCentric-Demo/
   if (!ref.startsWith(base)) return false;
   const rel = decodeURIComponent(ref.slice(base.length).split(/[?#]/)[0]);
   const p = path.join(dist, rel);
