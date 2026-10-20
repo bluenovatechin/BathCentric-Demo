@@ -44,7 +44,7 @@ export default function Footer() {
           <div className="footer-col">
             <h5>Products &amp; Fittings</h5>
             <ul className="footer-links">
-              <li><Link to="/mirrors">Smart LED Vanity Mirrors</Link></li>
+              <li><Link to="/mirrors">Bespoke Vanity Mirrors</Link></li>
               <li><Link to="/drains">Tile-Insert Linear Drains</Link></li>
               <li><Link to="/hardware">Solid Brass Towel Bars</Link></li>
               <li><Link to="/hardware">Designer Robe Hooks &amp; Shelves</Link></li>

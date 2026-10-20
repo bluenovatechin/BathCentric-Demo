@@ -14,7 +14,7 @@ const ENCLOSURE_LINKS = [
 
 const PRODUCT_LINKS = [
   { to: '/glass', icon: 'panel', title: 'Bathroom Glass', desc: 'Clear, fluted, frosted and tinted glass' },
-  { to: '/mirrors', icon: 'mirror', title: 'Smart LED Mirrors', desc: 'Round, arch, pill and rectangular' },
+  { to: '/mirrors', icon: 'mirror', title: 'Bathroom Mirrors', desc: 'Pill, arch, round and rectangular' },
   { to: '/drains', icon: 'drain', title: 'Linear Floor Drains', desc: 'Tile-insert and slim-channel drains' },
   { to: '/hardware', icon: 'hook', title: 'Accessories & Hardware', desc: 'Towel bars, hooks, shelves, hinges' },
 ];

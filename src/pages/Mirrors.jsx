@@ -9,57 +9,57 @@ export default function Mirrors() {
     {
       id: 'pill',
       category: 'pill',
-      title: 'The Pill / Capsule LED Mirror',
+      title: 'Pill / Capsule Mirror',
       badge: 'Bestseller for Vanities',
       image: '/images/mirror-pill.jpg',
-      desc: 'Elegant elongated capsule silhouette with rounded contours. Softens rectilinear tile geometries and pairs effortlessly above single and twin floating basin vanities.',
+      desc: 'An elongated capsule with soft rounded ends. It softens straight tile lines and sits beautifully above single and double floating vanities.',
       specs: [
-        'Available standard sizes: 450x900mm, 500x1000mm, 600x1200mm, or bespoke',
-        'Dual illumination: Front frosted border + ambient wall halo backlight',
-        'Built-in anti-fog heating pad with independent touch toggle',
-        '3-tone CCT: Warm White (3000K), Natural Day (4000K), Cool White (6000K)'
+        'Available standard sizes: 450 × 900, 500 × 1000, 600 × 1200 mm, or bespoke',
+        '5mm high-grade copper-free, lead-free silver float glass',
+        'CNC diamond-ground flat polish with safety arris chamfering',
+        'Concealed heavy-duty wall bracket holding mirror firmly to the wall'
       ]
     },
     {
       id: 'arch',
       category: 'arch',
-      title: 'The Architectural Arch LED Mirror',
+      title: 'Architectural Arch Mirror',
       badge: 'Designer Statement',
       image: '/images/mirror-arch.jpg',
-      desc: 'Dramatic architectural arch with a flat bottom base designed to sit flush against quartz vanity backsplashes or floating shelves, crowned with an expansive curve.',
+      desc: 'A tall architectural arch with a flat base that sits flush on a vanity backsplash or shelf, crowned by a generous curve.',
       specs: [
-        'Available standard sizes: 500x800mm, 600x900mm, 750x1050mm, or bespoke',
-        'Touch-dimmer sensor with memory recall of last brightness level',
-        'Steam-proof internal defogger demister element',
-        '5mm Copper-Free high-definition float glass with bevelled pencil edge'
+        'Available standard sizes: 500 × 800, 600 × 900, 750 × 1050 mm, or bespoke',
+        'Flat bottom base designed to sit flush against stone or tile backsplashes',
+        '5mm copper-free silvering impervious to moisture decay and black edges',
+        'Concealed mounting bracket providing a seamless floating profile'
       ]
     },
     {
       id: 'round',
       category: 'round',
-      title: 'The Halo Symmetrical Circle Mirror',
+      title: 'Circular Round Mirror',
       badge: 'Minimalist Icon',
       image: '/images/mirror-round.jpg',
-      desc: 'Timeless circular geometry producing an even 360° shadowless ring of light across the face. Transforms powder rooms and compact apartment ensuites into luxury sanctuaries.',
+      desc: 'Timeless circular geometry that brings balance to powder rooms and compact bathrooms alike.',
       specs: [
-        'Available diameters: 600mm, 750mm, 900mm, 1050mm custom',
-        'High CRI > 90+ for true-to-life skin tone reflection and grooming',
-        'IP44 waterproof certified sealed power driver and LED strips',
-        'Concealed French cleat aluminum wall mounting bracket'
+        'Available standard diameters: 600, 750, 900, 1050 mm, or custom sizing',
+        'Pristine, true-to-life reflection with zero optical distortion',
+        'Diamond-polished perimeter edge with smooth safety chamfer',
+        'Concealed French cleat / wall bracket for a flush floating appearance'
       ]
     },
     {
       id: 'rect',
       category: 'rect',
-      title: 'The Floating Rectangular LED Mirror',
+      title: 'Frameless Rectangular Mirror',
       badge: 'Classic Architectural',
       image: '/images/mirror-rect.jpg',
-      desc: 'Crisp, contemporary rectangular format with perimeter frosted light diffuser. Can be hung in portrait or landscape orientation to span wide double-sink vanity counters.',
+      desc: 'A crisp rectangle that can hang in portrait or landscape, wide enough to span a double-basin vanity.',
       specs: [
-        'Available sizes: 600x800mm, 900x750mm, 1200x800mm, 1500x900mm custom',
-        'Multi-function sensor: On/Off, CCT tone change, and stepless dimming',
-        'Integrated rapid demister pad clearing fog within 30 seconds',
-        '50,000+ hour continuous duty LED life with 3-year warranty'
+        'Available standard sizes: 600 × 800, 900 × 750, 1200 × 800, 1500 × 900 mm, or bespoke',
+        'Dual orientation: engineered to mount in portrait or landscape',
+        '5mm premium moisture-resistant copper-free silver mirror glass',
+        'Precision diamond-polished safety edges with concealed fixings'
       ]
     }
   ];
@@ -75,55 +75,55 @@ export default function Mirrors() {
         <div className="hero-wordmark" aria-hidden="true">BATHCENTRIC</div>
         <div className="container">
           <nav className="breadcrumb">
-            <Link to="/">Home</Link> <span>/</span> <span>Smart LED Mirrors</span>
+            <Link to="/">Home</Link> <span>/</span> <span>Bathroom Mirrors</span>
           </nav>
-          <span className="eyebrow" style={{ color: 'var(--color-accent-dark)' }}>Shadowless Illumination &amp; Smart Controls</span>
-          <h1>Smart LED Vanity Mirrors</h1>
+          <span className="eyebrow" style={{ color: 'var(--color-accent-dark)' }}>Custom Sized &amp; Concealed Mounting</span>
+          <h1>Bathroom Mirrors, Made to Measure</h1>
           <p>
-            Architectural bathroom mirrors crafted from 5mm copper-free float glass, equipped with feather-touch sensors, 3-color tone lighting, and rapid anti-fog demisters tailored as per your bathroom vanity specifications.
+            Architectural bathroom mirrors crafted from 5mm copper-free, lead-free silver mirror glass with diamond-polished edges and concealed wall mounting, in standard sizes or tailored to your vanity.
           </p>
         </div>
       </section>
 
-      {/* 4 Smart Innovations Banner */}
+      {/* 4 Built For Bathrooms Features */}
       <section className="section" style={{ backgroundColor: 'var(--color-bg-white)', borderBottom: '1px solid var(--color-border)' }}>
         <div className="container">
           <div className="section-header text-center">
-            <span className="eyebrow">Engineered For Indian Bathrooms</span>
-            <h2>Why BathCentric Smart Mirrors Excel</h2>
-            <p>Designed specifically to withstand high bathroom humidity, steam condensation, and daily grooming demands.</p>
+            <span className="eyebrow">Built For Bathrooms</span>
+            <h2>Why BathCentric Mirrors Excel</h2>
+            <p>Designed specifically to withstand high bathroom humidity and maintain pristine clarity for years.</p>
           </div>
 
           <div className="grid-4">
             <div className="feature-card" style={{ background: '#fff' }}>
-              <div className="feature-icon"><Icon name="sparkle" /></div>
-              <h3 className="feature-title">3-Color CCT Tuning</h3>
-              <p style={{ fontSize: '0.92rem' }}>
-                Toggle effortlessly between Warm Light (3000K for evening ambiance), Neutral Natural (4000K for grooming), and Daylight (6000K for razor-sharp precision).
-              </p>
-            </div>
-
-            <div className="feature-card" style={{ background: '#fff' }}>
-              <div className="feature-icon"><Icon name="shield" /></div>
-              <h3 className="feature-title">Steam-Free Anti-Fog</h3>
-              <p style={{ fontSize: '0.92rem' }}>
-                Concealed silicon heating pad gently warms the center glass surface, preventing condensation fog even during long, piping-hot monsoon and winter showers.
-              </p>
-            </div>
-
-            <div className="feature-card" style={{ background: '#fff' }}>
               <div className="feature-icon"><Icon name="layers" /></div>
               <h3 className="feature-title">5mm Copper-Free Glass</h3>
               <p style={{ fontSize: '0.92rem' }}>
-                Standard mirrors oxidize and develop black spots along perimeter edges within 12 months. Our copper-free silvering is impervious to moisture decay.
+                Ordinary mirrors develop black spots at perimeter edges in humid bathrooms. Copper-free silvering resists moisture decay permanently.
               </p>
             </div>
 
             <div className="feature-card" style={{ background: '#fff' }}>
-              <div className="feature-icon"><Icon name="lock" /></div>
-              <h3 className="feature-title">Stepless Touch Dimming</h3>
+              <div className="feature-icon"><Icon name="ruler" /></div>
+              <h3 className="feature-title">Sized to Your Vanity</h3>
               <p style={{ fontSize: '0.92rem' }}>
-                Feather-touch surface button with responsive glow. Press and hold to dim seamlessly from gentle 10% nightlight glow to vibrant 100% illumination.
+                Made to the exact width of your vanity and the lines of your tiles, in standard sizes or crafted strictly to measure.
+              </p>
+            </div>
+
+            <div className="feature-card" style={{ background: '#fff' }}>
+              <div className="feature-icon"><Icon name="sparkle" /></div>
+              <h3 className="feature-title">Diamond-Polished Edges</h3>
+              <p style={{ fontSize: '0.92rem' }}>
+                Diamond-ground flat polished edges with a precision safety chamfer for a clean, architectural, and touch-safe look.
+              </p>
+            </div>
+
+            <div className="feature-card" style={{ background: '#fff' }}>
+              <div className="feature-icon"><Icon name="tools" /></div>
+              <h3 className="feature-title">Concealed Mounting</h3>
+              <p style={{ fontSize: '0.92rem' }}>
+                A hidden heavy-duty wall bracket holds the mirror firmly and securely so it appears to float cleanly on the wall.
               </p>
             </div>
           </div>
@@ -135,8 +135,8 @@ export default function Mirrors() {
         <div className="container">
           <div className="section-header text-center">
             <span className="eyebrow">Bespoke Silhouettes</span>
-            <h2>Choose Your Mirror Architecture</h2>
-            <p>Custom fabricated to your vanity counter width, wall clearances, and preferred LED halo ambiance.</p>
+            <h2>Choose Your Mirror Silhouette</h2>
+            <p>Custom fabricated to your vanity counter width, wall clearances, and architectural layout.</p>
           </div>
 
           {/* Filter Tabs */}
@@ -167,14 +167,14 @@ export default function Mirrors() {
               className={`filter-tab ${activeShape === 'round' ? 'active' : ''}`}
               onClick={() => setActiveShape('round')}
             >
-              Circular Halo
+              Circular Round
             </button>
             <button
               type="button"
               className={`filter-tab ${activeShape === 'rect' ? 'active' : ''}`}
               onClick={() => setActiveShape('rect')}
             >
-              Minimalist Rectangle
+              Rectangle
             </button>
           </div>
 
@@ -186,7 +186,7 @@ export default function Mirrors() {
                 </div>
                 <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: '0.5rem', marginBottom: '0.75rem' }}>
                   <span className="badge-tag">{mirror.badge}</span>
-                  <span style={{ fontSize: '0.82rem', color: 'var(--color-accent-dark)', fontWeight: 600 }}>CRI &gt; 90+ High Definition</span>
+                  <span style={{ fontSize: '0.82rem', color: 'var(--color-accent-dark)', fontWeight: 600 }}>High-Definition Clarity</span>
                 </div>
                 <h3 style={{ fontSize: '1.4rem', marginBottom: '0.6rem' }}>{mirror.title}</h3>
                 <p style={{ fontSize: '0.95rem', marginBottom: '1.25rem' }}>{mirror.desc}</p>
@@ -227,39 +227,35 @@ export default function Mirrors() {
               <tbody>
                 <tr>
                   <th style={{ width: '30%' }}>Glass Specification</th>
-                  <td>5mm High-Grade Copper-Free Lead-Free Silver Mirror Float Glass</td>
+                  <td>5mm High-Grade Copper-Free, Lead-Free Silver Mirror Float Glass</td>
                 </tr>
                 <tr>
                   <th>Edge Detailing</th>
                   <td>CNC Diamond Ground Flat Polish with safety arris chamfering</td>
                 </tr>
                 <tr>
-                  <th>LED Specifications</th>
-                  <td>High-density SMD 2835 LEDs (120 LEDs/meter), 50,000+ hour rated lifespan</td>
+                  <th>Moisture Resistance</th>
+                  <td>Copper-free silver backing resists humidity decay, black spots, and perimeter corrosion</td>
                 </tr>
                 <tr>
-                  <th>Color Temperature (CCT)</th>
-                  <td>Triple Switchable: 3000K (Warm White) / 4000K (Natural) / 6000K (Cool White)</td>
+                  <th>Optical Clarity</th>
+                  <td>Pristine, true-to-life reflection with zero optical distortion or waviness</td>
                 </tr>
                 <tr>
-                  <th>Color Rendering Index</th>
-                  <td>CRI &ge; 90+ (Pristine, true-to-life makeup and grooming reflection)</td>
+                  <th>Available Silhouettes</th>
+                  <td>Pill / Capsule, Architectural Arch, Circular Round, and Rectangular</td>
                 </tr>
                 <tr>
-                  <th>Anti-Fog Defogger</th>
-                  <td>Integrated PET heating element (25W–45W depending on mirror surface area)</td>
+                  <th>Sizing Options</th>
+                  <td>Standard vanity sizes or custom fabricated made-to-measure for your vanity</td>
                 </tr>
                 <tr>
-                  <th>Water Resistance</th>
-                  <td>IP44 / IP65 splash-proof sealed aluminum back-chassis</td>
+                  <th>Mounting System</th>
+                  <td>Concealed heavy-duty wall bracket system for a clean floating aesthetic</td>
                 </tr>
                 <tr>
-                  <th>Power Input</th>
-                  <td>Standard 220V–240V AC 50Hz with concealed wall wire connection</td>
-                </tr>
-                <tr>
-                  <th>Warranty</th>
-                  <td>3-Year Comprehensive Warranty on LED strip, power driver, and touch sensor</td>
+                  <th>Pricing</th>
+                  <td>Quoted to your bespoke vanity size and silhouette</td>
                 </tr>
               </tbody>
             </table>
@@ -275,12 +271,12 @@ export default function Mirrors() {
               <span className="eyebrow" style={{ color: 'var(--color-accent-on-dark)' }}>Custom Vanity Dimensions?</span>
               <h2 className="banner-title">Get Your Mirror Custom Sized During Your Site Visit</h2>
               <p className="banner-desc">
-                Our technician measures your bathroom vanity width, backsplash tile lines, and electrical outlet placement during the laser survey to produce a custom-fitted LED mirror.
+                Our technician measures your bathroom vanity width, backsplash tile lines, and wall clearances during the laser survey to produce a custom-fitted mirror.
               </p>
               <div className="banner-actions">
                 <Link to="/quote" className="btn btn-accent btn-lg">Book Free Site Measurement</Link>
                 <a
-                  href="https://wa.me/919876543210?text=Hi%20BathCentric,%20I'd%20like%20to%20consult%20about%20custom%20smart%20LED%20bathroom%20mirrors."
+                  href="https://wa.me/919876543210?text=Hi%20BathCentric,%20I'd%20like%20to%20consult%20about%20custom%20bathroom%20mirrors."
                   target="_blank"
                   rel="noopener noreferrer"
                   className="btn btn-whatsapp btn-lg"

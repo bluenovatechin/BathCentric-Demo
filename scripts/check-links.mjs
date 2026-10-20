@@ -6,7 +6,7 @@ import { fileURLToPath } from 'url';
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const dist = path.join(root, 'dist');
-const base = (process.env.BASE_PATH || '/BathCentric-Demo/').replace(/\/?$/, '/');
+const base = (process.env.BASE_PATH || '/BathCentric/').replace(/\/?$/, '/');
 
 const htmlFiles = [];
 (function walk(dir) {

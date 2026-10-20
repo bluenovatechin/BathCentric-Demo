@@ -274,7 +274,7 @@ export default function Quote() {
                     { id: 'Turnkey Bathroom Design', label: 'Bespoke Bathroom Design & Implementation' },
                     { id: 'Bathroom Redesign / Renovation', label: 'Bathroom Redesign & Remodeling' },
                     { id: 'Shower Enclosure', label: 'Frameless Shower Enclosure / Glass' },
-                    { id: 'Smart LED Mirrors', label: 'Smart Touch LED Vanity Mirrors' },
+                    { id: 'Bathroom Mirrors', label: 'Bespoke Vanity Mirrors (Made to Size)' },
                     { id: 'Linear Floor Drains', label: 'Invisible Tile-Insert Linear Drains' },
                     { id: 'Bathroom Maintenance', label: 'Annual Deep Cleaning & Care' },
                     { id: 'Bathroom Accessories', label: 'Luxury Accessories & PVD Hardware Only' },

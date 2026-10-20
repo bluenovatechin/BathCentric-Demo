@@ -6,7 +6,7 @@ const env = import.meta.env;
 
 const trimSlash = (s) => String(s || '').replace(/\/+$/, '');
 
-export const SITE_URL = trimSlash(env.VITE_SITE_URL || 'https://bluenovatechin.github.io/BathCentric-Demo');
+export const SITE_URL = trimSlash(env.VITE_SITE_URL || 'https://bluenovatechin.github.io/BathCentric');
 export const BASE_PATH = env.BASE_URL || '/';
 
 export const site = {
@@ -46,7 +46,7 @@ export const integrations = {
 
 export const absoluteUrl = (path = '/') => SITE_URL + (path.startsWith('/') ? path : `/${path}`);
 
-// Prefix a public-folder asset with the deploy base path (/BathCentric-Demo/ on GitHub Pages, / on Vercel).
+// Prefix a public-folder asset with the deploy base path (/BathCentric/ on GitHub Pages, / on Vercel).
 export const asset = (path) => `${BASE_PATH}${String(path).replace(/^\/+/, '')}`;
 
 export const whatsappLink = (message) =>

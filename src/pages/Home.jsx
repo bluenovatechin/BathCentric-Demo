@@ -67,7 +67,7 @@ export default function Home() {
               Transform your bathroom with <span className="text-gradient">bespoke design &amp; glass.</span>
             </h1>
             <p className="hero-subtitle">
-              We design, renovate, and implement complete bathrooms tailored to your space, layout, budget, and accessory preferences — from frameless glass shower enclosures and smart LED mirrors to invisible tile-insert drains.
+              We design, renovate, and implement complete bathrooms tailored to your space, layout, budget, and accessory preferences — from frameless glass shower enclosures and bespoke vanity mirrors to invisible tile-insert drains.
             </p>
             <div className="hero-ctas">
               <Link to="/quote" className="btn btn-accent btn-lg">
@@ -486,14 +486,14 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Smart LED Mirrors & Linear Floor Drains Showcase */}
+      {/* Bespoke Vanity Mirrors & Linear Floor Drains Showcase */}
       <section className="section" style={{ backgroundColor: 'var(--color-bg-white)', borderBottom: '1px solid var(--color-border)' }}>
         <div className="container">
           <div className="section-header text-center">
-            <span className="eyebrow">Bathroom Innovations</span>
-            <h2 className="section-title">Smart Vanity Mirrors &amp; Invisible Linear Drains</h2>
+            <span className="eyebrow">Bathroom Solutions</span>
+            <h2 className="section-title">Bespoke Vanity Mirrors &amp; Invisible Linear Drains</h2>
             <p>
-              Engineered specifically for the realities of Indian bathrooms: steam-resistant touch electronics and discreet anti-cockroach floor drainage.
+              Engineered specifically for the realities of Indian bathrooms: moisture-resistant copper-free mirrors and discreet anti-cockroach floor drainage.
             </p>
           </div>
 
@@ -503,7 +503,7 @@ export default function Home() {
               <div style={{ position: 'relative', borderRadius: '8px', overflow: 'hidden', aspectRatio: '3/2', marginBottom: '20px' }}>
                 <img
                   src="/images/mirror-arch.jpg"
-                  alt="Architectural Smart LED Vanity Mirror with Defogger"
+                  alt="Architectural Made-to-Measure Vanity Mirror"
                   style={{ width: '100%', height: '100%', objectFit: 'cover' }}
                   loading="lazy"
                 />
@@ -525,23 +525,23 @@ export default function Home() {
                 </span>
               </div>
               <h3 style={{ fontSize: '1.5rem', marginBottom: '8px', color: 'var(--color-primary)' }}>
-                Smart Touch-Sensor LED Mirrors
+                Made-to-Measure Vanity Mirrors
               </h3>
               <p style={{ fontSize: '0.92rem', color: 'var(--color-text-secondary)', lineHeight: 1.6, marginBottom: '16px' }}>
-                5mm copper-free high-definition float glass with integrated touch-sensor dimmer, 3-tone CCT color changing (Warm/Day/Cool), and rapid demister heating pads that eliminate steam in seconds.
+                5mm copper-free, lead-free silver mirror glass with diamond-polished edges and concealed wall mounting. Custom-sized to your vanity counter width in Pill, Arch, Round, or Rectangular silhouettes.
               </p>
               <div style={{ display: 'flex', gap: '8px', flexWrap: 'wrap', marginBottom: '20px' }}>
-                <span className="badge-tag">3-Tone CCT Light</span>
-                <span className="badge-tag">Anti-Fog Defogger</span>
-                <span className="badge-tag">Touch Dimmer</span>
-                <span className="badge-tag">IP44 Waterproof</span>
+                <span className="badge-tag">5mm Copper-Free Glass</span>
+                <span className="badge-tag">Diamond-Polished Edges</span>
+                <span className="badge-tag">Concealed Mounting</span>
+                <span className="badge-tag">Sized to Vanity</span>
               </div>
               <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: '12px', paddingTop: '16px', borderTop: '1px solid var(--color-border)' }}>
                 <div style={{ fontSize: '0.85rem', color: 'var(--color-text-muted)', fontStyle: 'italic' }}>
                   As per client's vanity specifications
                 </div>
                 <Link to="/mirrors" className="btn btn-primary btn-sm">
-                  View All Smart Mirrors &rarr;
+                  View All Mirrors &rarr;
                 </Link>
               </div>
             </article>
