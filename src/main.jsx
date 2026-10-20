@@ -1,23 +1,13 @@
 import React from 'react';
-import { createRoot, hydrateRoot } from 'react-dom/client';
-import { BrowserRouter } from 'react-router-dom';
-import '@fontsource-variable/bodoni-moda/wght.css';
-import '@fontsource-variable/bodoni-moda/wght-italic.css';
-import '@fontsource-variable/instrument-sans/wght.css';
-import './styles.css';
-import './stage.css';
+import ReactDOM from 'react-dom/client';
+import { HashRouter } from 'react-router-dom';
 import App from './App';
+import './index.css';
 
-const basename = import.meta.env.BASE_URL.replace(/\/$/, '') || '/';
-const app = (
+ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <BrowserRouter basename={basename}>
+    <HashRouter>
       <App />
-    </BrowserRouter>
+    </HashRouter>
   </React.StrictMode>
 );
-
-const root = document.getElementById('root');
-// Production pages are prerendered, so hydrate them; in dev the root starts empty.
-if (root.hasChildNodes()) hydrateRoot(root, app);
-else createRoot(root).render(app);

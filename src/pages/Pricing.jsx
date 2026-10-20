@@ -1,64 +1,88 @@
 import { Link } from 'react-router-dom';
-import { FinishSwatch } from '../components/Swatches';
-import { PageHeader, SectionHead, Label, CtaBand, Faq } from '../components/Blocks';
-import { finishes, addOns, enclosures, faqs, answers, inr, GST_NOTE } from '../data/catalog';
+import PageHero from '../components/PageHero';
+import Faq from '../components/Faq';
+import CtaBanner from '../components/CtaBanner';
+import { finishes, addOns, enclosures, formatINR, GST_NOTE, PRICE_NOTE, START_PRICE } from '../data/catalog';
 
 export default function Pricing() {
   return (
     <>
-      <PageHeader crumbs={[['Pricing']]} kicker="Price list 2026" no="01" title={<>Clear, simple <em>pricing</em></>} answer={answers.pricing} />
+      <PageHero crumbs={[['Price List']]} eyebrow="Price list 2026" title="Shower enclosure prices">
+        Simple per-square-foot rates. Shower enclosures start at {formatINR(START_PRICE)}/sq ft in chrome. GST is
+        extra.
+      </PageHero>
 
       <section className="section" aria-labelledby="rates-title">
-        <div className="wrap">
-          <SectionHead no="02" kicker="Enclosure rates" title={<>Price per <em>sft.</em></>} split id="rates-title">
-            One rate for {enclosures.map((e) => e.short).join(', ')} enclosures, set by the finish of your fittings.
-          </SectionHead>
-          <ul className="rate-cards" data-reveal="stagger">
-            {finishes.map((f) => (
-              <li className="rate-card" key={f.id}>
-                <FinishSwatch id={f.id} size="sm" />
-                <h3>{f.name}</h3>
-                <p className="price-num">{inr(f.price)}</p>
-                <small>per sft*</small>
-              </li>
-            ))}
-          </ul>
-          <p className="note">{GST_NOTE}</p>
-        </div>
-      </section>
-
-      <section className="section section-paper" aria-labelledby="addon-title">
-        <div className="wrap two">
-          <div>
-            <Label no="03">Add-ons</Label>
-            <h2 className="h2" data-reveal="title" id="addon-title" style={{ margin: '22px 0 18px' }}>Add-on <em>prices.</em></h2>
-            <ul className="ledger" data-reveal="stagger">
-              {addOns.map((a) => (
-                <li key={a.id}><h3>{a.name}</h3><span className="amt">{inr(a.price)}<small>/ {a.unit}*</small></span><p>{a.text}</p></li>
-              ))}
-            </ul>
-            <p className="note">{GST_NOTE}</p>
+        <div className="container container-mid">
+          <div className="section-header">
+            <p className="eyebrow">Enclosure rates</p>
+            <h2 id="rates-title">Price by fitting finish</h2>
+            <p>
+              These rates apply to single panel, swing, sliding and L-type enclosures in 8mm toughened Saint-Gobain glass
+              with SS 304 fittings.
+            </p>
           </div>
-          <div>
-            <Label no="04">Your quote</Label>
-            <h2 className="h2" data-reveal="title" style={{ margin: '22px 0 18px' }}>How it is <em>worked out.</em></h2>
-            <ol className="steps-num" data-reveal="stagger">
+          <div className="table-scroll" role="region" aria-label="Price per sq ft by finish" tabIndex={0}>
+            <table className="specs-table price-table">
+              <thead>
+                <tr><th scope="col">Finish</th><th scope="col">Price per sq ft*</th></tr>
+              </thead>
+              <tbody>
+                {finishes.map((f) => (
+                  <tr key={f.id}>
+                    <th scope="row"><span className={`finish-dot ${f.swatch}`} aria-hidden="true" />{f.name}</th>
+                    <td><strong>{formatINR(f.price)}</strong></td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+          <p className="fine-print-left">{PRICE_NOTE} {GST_NOTE}</p>
+
+          <div className="section-header mt-xl">
+            <p className="eyebrow">Add-ons</p>
+            <h2 id="addon-rates-title">Add-on prices</h2>
+          </div>
+          <div className="table-scroll" role="region" aria-label="Add-on prices" tabIndex={0}>
+            <table className="specs-table price-table">
+              <thead>
+                <tr><th scope="col">Add-on</th><th scope="col">What it is</th><th scope="col">Price*</th></tr>
+              </thead>
+              <tbody>
+                {addOns.map((a) => (
+                  <tr key={a.id}>
+                    <th scope="row">{a.name}</th>
+                    <td>{a.text}</td>
+                    <td><strong>{formatINR(a.price)}</strong> per {a.unit}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+          <p className="fine-print-left">{GST_NOTE}</p>
+
+          <div className="info-box mt-xl">
+            <h2 className="h3-like">How your quote is worked out</h2>
+            <ol className="numbered-list">
               <li>We measure your shower area.</li>
-              <li>The area in sft is multiplied by the rate for your chosen finish.</li>
-              <li>Any add-ons you pick are added at the rates shown.</li>
+              <li>The area in sq ft is multiplied by the rate for your chosen finish.</li>
+              <li>Any add-ons you pick are added at the rates above.</li>
               <li>GST is added at the prevailing rate on the date of invoicing.</li>
             </ol>
-            <p className="muted" style={{ margin: '20px 0 28px' }}>Your written quotation confirms the final price before any work starts.</p>
-            <div className="actions">
-              <Link to="/quote" className="btn btn-ink btn-sm">Request a Quote</Link>
-              <Link to="/shower-enclosures" className="link">Compare enclosures</Link>
+            <p>
+              Enclosure type, glass type and the layout of your bathroom can also affect the final figure, so we always
+              confirm the price in a written quote before work starts.
+            </p>
+            <div className="btn-row">
+              <Link to="/quote" className="btn btn-accent">Get a Quote</Link>
+              <Link to="/shower-enclosures" className="link-arrow">Compare {enclosures.length} enclosure types</Link>
             </div>
           </div>
         </div>
       </section>
 
-      <Faq items={faqs} no="05" />
-      <CtaBand />
+      <Faq title="Pricing and product questions" />
+      <CtaBanner />
     </>
   );
 }
