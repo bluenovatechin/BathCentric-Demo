@@ -9,6 +9,7 @@
     "preview": "vite preview",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d dist",
+    "check:links": "node scripts/check-links.mjs",
     "check:images": "node scripts/check-images.mjs",
     "optimize:images": "node scripts/optimize-images.mjs"
   },

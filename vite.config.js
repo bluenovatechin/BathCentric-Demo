@@ -3,7 +3,8 @@ import react from '@vitejs/plugin-react';
 
 export default defineConfig(({ command }) => {
   const isBuild = command === 'build';
-  const base = isBuild ? '/BathCentric/' : '/';
+  // GitHub Pages serves this repo at /BathCentric-Demo/; set BASE_PATH=/ for Vercel or a custom domain.
+  const base = isBuild ? (process.env.BASE_PATH || '/BathCentric-Demo/').replace(/\/?$/, '/') : '/';
 
   return {
     plugins: [
